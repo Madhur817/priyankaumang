@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  text-align: center;
+  z-index: 2;
+  padding: 10px;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  color: #3a2a20;
+  margin: 20px 0;
+  transition: opacity 2s ease;
+}
+
+.photo {
+  width: 280px;
+  border-radius: 16px;
+  margin: 20px 0;
+  opacity: 0;
+  transition: opacity 2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.footer {
+  font-size: 1.2em;
+  color: #5b4636;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* For smaller phones - more aggressive spacing reduction */
+@media (max-height: 700px) {
+  h1 {
+    font-size: 1.5em;
+    margin: 12px 0;
+  }
+
+  .photo {
+    width: 200px;
+    margin: 12px 0;
+  }
+
+  .footer {
+    font-size: 1em;
+    margin: 8px 0;
+  }
+}
+
+@media (max-height: 650px) {
+  h1 {
+    font-size: 1.3em;
+    margin: 8px 0;
+  }
+
+  .photo {
+    width: 160px;
+    margin: 8px 0;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    margin: 6px 0;
+  }
+}
+
+/* For very small phones like iPhone SE */
+@media (max-height: 570px) {
+  h1 {
+    font-size: 1.1em;
+    margin: 5px 0;
+  }
+
+  .photo {
+    width: 140px;
+    margin: 5px 0;
+    border-radius: 12px;
+  }
+
+  .footer {
+    font-size: 0.8em;
+    margin: 4px 0;
+  }
+
+  .container {
+    padding: 5px;
+  }
+}
